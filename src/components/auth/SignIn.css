@@ -1,0 +1,268 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.authBox {
+    margin: 80px auto 30px;
+    width: 698px;
+}
+
+.leftBox {
+    width: 300px;
+    height: 480px;
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.bgGreen {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 138, 114);
+    border-top-left-radius: 90px;
+}
+
+.imageAuth {
+    background-image: url("../../images/svg-4.svg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 90px;
+    opacity: 0.4;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+.imageText {
+    font-size: 28px;
+    position: absolute;
+    color: #f9f9f9;
+}
+
+.imageText.bold {
+    font-weight: bold;
+}
+
+.imageText.style1 {
+    top: 200px;
+    left: 17px;
+}
+
+.imageText.style2 {
+    top: 250px;
+    left: 15px;
+    font-size: 22px;
+}
+
+.rightBox {
+    width: 398px;
+    height: 478px;
+    float: right;
+    border: 1px solid #59c385;
+    background: #f9f9f9;
+}
+
+.box {
+    width: 310px;
+    height: 430px;
+    margin: 32px auto;
+}
+
+.titleAuth {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #56746b;
+}
+
+.inputSBox {
+    width: 300px;
+    height: 42px;
+    border-bottom: 2px solid #d8d8d8;
+    margin-bottom: 10px;
+}
+
+.inputSBox input {
+    background: none;
+}
+
+.inputS {
+    width: 100%;
+    height: 98%;
+    font-size: 14px;
+    color: #37353f;
+    text-indent: 10px;
+    border: 0;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.contentBox {
+    overflow: hidden;
+    height: 42px;
+    margin-bottom: 30px;
+}
+
+.checkboxBox {
+    overflow: hidden;
+    float: left;
+}
+
+.checkbox {
+    float: left;
+    margin-top: 3px;
+}
+
+.checkboxLabel {
+    float: left;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #37353f;
+    margin-top: 1px;
+}
+
+.text1 {
+    float: right;
+    font-size: 14px;
+    color: #006cbc;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.btnAuth a {
+    border-radius: 50px;
+    background: #609671;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 135px 10px 135px;
+    color: #fff;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.btnAuth a:hover {
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+    background: #ffffff;
+    color: #1f2328;
+}
+
+.inputBtn input {
+    padding: 15px 135px 10px 135px;
+    border-radius: 50px;
+    background: #609671;
+    color: white;
+    white-space: nowrap;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBtn input:hover {
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+    background: #ffffff;
+    color: #1f2328;
+}
+
+.register {
+    margin-top: 15px;
+}
+
+.borderBox {
+    width: 300px;
+    height: 25px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.line {
+    border-bottom: 2px solid #d8d8d8;
+    position: absolute;
+    top: 22px;
+    width: 100%;
+}
+
+.text2 {
+    font-size: 14px;
+    color: #818487;
+}
+
+.text2.or {
+    position: absolute;
+    top: 14px;
+    left: 140px;
+    width: 25px;
+    height: 16px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.socialMediaBox {
+    overflow: hidden;
+    width: 184px;
+    height: 47px;
+    margin: 0 auto;
+}
+
+.icAuth {
+    width: 41px;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/* .icAuthBtn {
+    background-color: rgb(252, 252, 252);
+    border: none;
+} */
+
+.icAuth:last-child {
+    margin-right: 0;
+}
+
+.icAuth.google a img {
+    width: 32px;
+}
+
+.icAuth.facebook a img {
+    width: 37px;
+    margin-top: -3px;
+}
+
+.icAuth.twitter a img {
+    width: 36px;
+}
+
+@media screen and (max-width: 768px) {
+    .authBox {
+        width: 100%;
+    }
+
+    .leftBox {
+        display: none;
+    }
+
+    .rightBox {
+        width: 100%;
+        float: initial;
+        border: 0;
+    }
+}
