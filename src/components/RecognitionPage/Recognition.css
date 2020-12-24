@@ -40,7 +40,7 @@
     margin-bottom: 10vh;
     width: 800px;
     height: 150px;
-    padding: 60px 35px 35px 35px;
+    padding: 15px;
     border-radius: 40px;
     background: #e8ebe9;
     box-shadow: 13px 13px 15px #536b53da,
@@ -81,8 +81,9 @@
 } */
 
 .fields {
-    width: 98%;
+    /* width: 98%; */
     display: flex;
+    margin: 15px;
 }
 
 .fields input {

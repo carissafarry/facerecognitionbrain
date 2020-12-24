@@ -42,13 +42,38 @@ class Recognition extends Component {
         this.setState({input: event.target.value});
     }
 
-    onButtonSubmit = () => {
+    onButtonSubmitUrl = () => {
         this.setState({imageUrl: this.state.input});
         app.models.predict(
             Clarifai.FACE_DETECT_MODEL,
             this.state.input
         ).then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
             .catch(err => console.log(err));
+    }
+
+    onButtonSubmitFile = () => {
+        this.setState({imageUrl: this.state.input});
+        app.models.predict(
+            Clarifai.FACE_DETECT_MODEL,
+            this.state.input.replace(/^data:image\/(.*);base64,/, '')
+        ).then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+            .catch(err => console.log(err));
+    }
+
+    uploadImageOnChange=(event)=>{
+        if(event.target.files[0]) {
+            var reader = new FileReader();
+            reader.addEventListener('load', this.inputsetState)
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
+
+    inputsetState=(event)=>{
+        this.setState({
+            input: event.target.result
+        },function(){
+            this.onButtonSubmitFile()
+        })
     }
 
     render() {
@@ -64,28 +89,45 @@ class Recognition extends Component {
                     </div>
                     <div className="recognition-form">
                         <div className="recognition-div">
-                            {/* <div className='logo'></div> */}
-                            {/* <div className='title'>Red Stapler</div> */}
-                            {/* <div className='subtitle'>Beta</div> */}
                             <div className='fields'>
                                 <img src={"https://img.icons8.com/fluent-systems-regular/26/000000/upload.png"} alt='upload' 
-                                style={{
+                                    style={{
                                     padding:'7px 10px 7px 0'
-                                }}/>
+                                    }}
+                                />
+                                <div className='photo-input'>
+                                    <input 
+                                        type="file" 
+                                        id="upload_file" 
+                                        onChange={this.uploadImageOnChange}
+                                    />
+                                </div>
+                                <LinkS to={`#result`}></LinkS>
+                                <div className='recognitionBtn' 
+                                    onClick={this.onButtonSubmitFile}>
+                                    <button>Upload</button>
+                                </div>
+                            </div>
+
+                            <div className='fields'>
+                                <img src={"https://img.icons8.com/fluent-systems-regular/26/000000/upload.png"} alt='upload' 
+                                    style={{
+                                    padding:'7px 10px 7px 0'
+                                    }}
+                                />
                                 <div className='photo-input'>
                                     <input 
                                         type='text' 
                                         className='user-input' 
-                                        placeholder='Unggah foto Anda' 
+                                        placeholder='Masukkan URL Gambar' 
                                         onChange={this.onInputChange}
                                     >
                                     </input>
                                 </div>
                                 <LinkS to={`#result`}></LinkS>
                                 <div className='recognitionBtn' 
-                                    onClick={this.onButtonSubmit}>
-                                    {/* <a href='#result'>Upload</a> */}
-                                    <button>Upload</button>
+                                    onClick={this.onButtonSubmitUrl}>
+                                    <button>Detect</button>
                                 </div>
                             </div>
                         </div>
