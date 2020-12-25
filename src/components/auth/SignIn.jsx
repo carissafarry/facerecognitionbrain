@@ -15,24 +15,26 @@ class SigninContainer extends Component {
                     <div className="rightBox">
                         <div className="box">
                             <div className="titleAuth">Sign In</div>
-                            <div className="inputSBox">
-                                {/* <label className='' htmlFor=''>Username</label> */}
-                                <input type="text" className="inputS" placeholder="Username" />
-                            </div>
-                            <div className="inputSBox">
-                                {/* <label className='' htmlFor=''>Password</label> */}
-                                <input type="password" className="inputS" placeholder="Password" />
-                            </div>
-                            <div className="contentBox">
-                                <div className="checkbox Box">
-                                    <input type="checkbox" className="checkbox" />
-                                    <label className="checkboxLabel">Ingat saya</label>
+                            <form>
+                                <div className="inputSBox">
+                                    {/* <label className='' htmlFor=''>Username</label> */}
+                                    <input type="text" className="inputS" placeholder="Username" />
                                 </div>
-                                <div className="text1"><a href='/recognition'>Lupa password?</a></div>
-                            </div>
-                            <div className="inputBtn">
-                                <input type='submit' name='' value='Log In'></input>
-                            </div>
+                                <div className="inputSBox">
+                                    {/* <label className='' htmlFor=''>Password</label> */}
+                                    <input type="password" className="inputS" placeholder="Password" />
+                                </div>
+                                <div className="contentBox">
+                                    <div className="checkbox Box">
+                                        <input type="checkbox" className="checkbox" />
+                                        <label className="checkboxLabel">Ingat saya</label>
+                                    </div>
+                                    <div className="text1"><a href='/recognition'>Lupa password?</a></div>
+                                </div>
+                                <div className="inputBtn">
+                                    <input type='submit' name='' value='Log In'></input>
+                                </div>
+                            </form>
                             <div className="btnAuth"><a href="/register">Register</a></div>
                             <div className="iconBox">
                                 <div className="borderBox">

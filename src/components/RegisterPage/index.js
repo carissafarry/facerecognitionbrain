@@ -9,17 +9,19 @@ const Register = () => {
                     <h2>Safe for Care</h2>
                     <h4>Register</h4>
                 </div>
-                <div className='user'>
-                    {/* <label className='' htmlFor=''>Username</label> */}
-                    <input type='text' name='' placeholder='Username'></input>
-                </div>
-                <div className='user'>
-                {/* <label className='' htmlFor=''>Password</label> */}
-                    <input type='password' name='' placeholder='Password'></input>
-                </div>
-                <div className='button'>
-                    <input type='submit' name='' value='Log In'></input>
-                </div>
+                <form>
+                    <div className='user'>
+                        {/* <label className='' htmlFor=''>Username</label> */}
+                        <input type='text' name='' placeholder='Username'></input>
+                    </div>
+                    <div className='user'>
+                    {/* <label className='' htmlFor=''>Password</label> */}
+                        <input type='password' name='' placeholder='Password'></input>
+                    </div>
+                    <div className='button'>
+                        <input type='submit' name='' value='Log In'></input>
+                    </div>
+                </form>
                 <div className='help'>
                     <h3>Have an account?<span><a href='/signin' className='link'>  Sign In</a></span></h3>
                 </div>
